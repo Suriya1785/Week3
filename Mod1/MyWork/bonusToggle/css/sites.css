@@ -1,0 +1,16 @@
+/* Padding to support responsive and overcome navigation bar */
+
+body {
+    padding-top: 1.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+footer {
+    padding-left: 1.5rem;
+}
+
+.tour {
+    margin: 20px;
+    border: 1px solid black;
+    padding: 10px;
+}
