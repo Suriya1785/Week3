@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome: https://fontawesome.com/icons?d=gallery&m=free -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- custom css-->
+    <link rel="stylesheet" href="css/sites.css" />
+
+    <title>Hotel Cost Estimator</title>
+</head>
+
+<body>
+    <!-- Start Body -->
+
+    <!-- Navigation to applicable web pages -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
+        <a class="navbar-brand" href="index.html">KumbaKonam Special<img class="rounded-circle" src="images/logo.jpg" alt="roundCirclelogoMissing"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="hotelCost.html">Hotels</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="carRental.html">Rentals</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tourExplorer.html">Tour</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header of the page outlining the logo-->
+    <header>
+        <div class="jumbotron">
+            <div class="container text-right">
+                <h1 class="trend-title font-italic">Kumbakonam Karoke</h1>
+                <img class="logo-bg" src="images/13pioustemple.jpg" alt="website logo missing">
+                <img class="hideimage" src="images/homepageImage.jpg" alt="website logo missing">
+                <h2 class="font-italic font-weight-light">You are no longer Stranger</h2>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Content - Vision of the website-->
+
+    <main>
+        <section>
+            <h3 class="font-italic ml-2">Hotel Cost Calculator - Applies cheap rates for customer and quality</h3>
+            <div class="container justify-content-center border">
+                <form class="form-group" id="hotelCostForm" action="hotelCost.html" method="GET" target="_self">
+                    <div class="row col-md-8 mt-1 form-inline">
+                        <!-- select a room type indicates as not selected option-->
+                        <label class="d-none d-md-inline col-md-3" for="selectRoomType">Room Type</label>
+                        <select id="selectRoomType" class="d-none d-inline form-control col-md-6" name="selectRoomType" autofocus>
+                                        <option value=" ">Select a Room type</option>
+                                        <option value ="Queen">Queen</option>
+                                        <option value ="King">King</option>
+                                        <option value ="King Suite">King Suite</option>
+                                        <option value ="2-BedroomSuite">2-Bedroom Suite</option>
+                        </select>
+                    </div>
+                    <!-- date input shows warning for html validation for browser compatibility-->
+                    <div class="row col-md-8 mt-1 form-inline">
+                        <label class="d-none d-md-inline col-md-3" for="inputCheckInDate">Check-in Date</label>
+                        <input type="date" id="inputCheckInDate" name="inputCheckInDate" class="d-inline form-control col-md-6" required>
+                    </div>
+                    <div class="row col-md-8 mt-1 form-inline">
+                        <label class="d-none d-md-inline col-md-3" for="inputNoOfNights">Number Of Nights</label>
+                        <input type="number" id="inputNoOfNights" name="inputNoOfNights" class="d-inline form-control col-md-6" min=1 max=28 placeholder="Number Of Nights" required>
+                    </div>
+                    <div class="row col-md-12 mt-1 form-inline">
+                        <!-- select no of adults indicates not selected option-->
+                        <label class="d-none d-md-inline col-md-2" for="selectNoOfAdults">Number Of Adults</label>
+                        <select id="selectNoOfAdults" class="d-none d-inline form-control col-md-4" name="selectNoOfAdults">
+                                            <option value = 0>Select No of Adults</option>
+                                            <option value = 1>1</option>
+                                            <option value = 2>2</option>
+                                            <option value = 3>3</option>
+                                            <option value = 4>4</option>
+                        </select>
+                        <!-- select no of child indicates NOT selected option-->
+                        <label class="d-none d-md-inline col-md-2" for="selectNoOfChild">Number Of Child</label>
+                        <select id="selectNoOfChild" class="d-none d-inline form-control col-md-4" name="selectNoOfChild">
+                                            <option value = 0>Select if you have children</option>
+                                            <option value = 1>1</option>
+                                            <option value = 2>2</option>
+                                            <option value = 3>3</option>
+                                            <option value = 4>4</option>
+                        </select>
+                    </div>
+                    <!-- checkbox for breakfast-->
+                    <div class="form-check form-check-inline mt-1">
+                        <div class="form-check">
+                            <label class="form-check-label mr-3" for="inputCheckboxBrkfstYes">Breakfast Included</label>
+                            <input class="form-check-input" type="checkbox" id="inputCheckboxBrkfstYes" value="Yes" name="inputCheckboxBrkfstYes">
+                        </div>
+                    </div>
+                    <!-- Radiobox for discounts-->
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <div class="ml-3">Discounts</div>
+                            <input class="form-check-input ml-4" type="radio" id="inputRadioboxNone" value=" " name="inputRadioboxDisc" checked>
+                            <label class="form-check-label" for="inputRadioboxNone">None</label>
+                            <input class="form-check-input ml-4" type="radio" id="inputRadioboxAAA" value="AAA" name="inputRadioboxDisc">
+                            <label class="form-check-label" for="inputRadioboxAAA">AAA</label>
+                            <input class="form-check-input ml-3" type="radio" id="inputRadioboxSr" value="Senior" name="inputRadioboxDisc">
+                            <label class="form-check-label" for="inputRadioboxSr">Senior</label>
+                            <input class="form-check-input ml-3" type="radio" id="inputRadioboxMil" value="Military" name="inputRadioboxDisc">
+                            <label class="form-check-label" for="inputRadioboxMil">Military</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="mt-3 col-md-3">
+                            <button id="estimateTotalCostBtn" class="btn btn-sm btn-block btn-primary btn-info" type="button">Estimate Total Cost</button>
+                        </div>
+                        <div class="mt-3 col-md-3">
+                            <button id="resetBtn" class="btn btn-sm btn-block btn-primary btn-info" type="reset">Reset</button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="mt-3" id="inclusiveDate"></p>
+                        <p id="totalRoomCost"></p>
+                        <p id="discount"></p>
+                        <p id="tax"></p>
+                        <p id="totalCost"></p>
+                    </div>
+                    <div class="row mt-3 ml-1">
+                        <p id="errorMsgId"></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <hr />
+
+    <footer class="footer ">
+        <!-- Start of footer -->
+        <!-- links to our parental sites-->
+
+        <div class="row justify-content-center ">
+            <h5 class="display-5 font-weight-light ">Follow us on parent Indian government Sites <span class="font-italic font-weight-bold ">Tamilnadu Tourism</span> On social</h5>
+        </div>
+        <!--  links to Parent Sites-->
+
+        <div class="row justify-content-center ">
+            <ul class="d-flex flex-row list-unstyled ">
+                <li>
+                    <a class="footer-style-facebook " href="https://www.facebook.com/tnttdc/" target="facebook"><i class="fa fa-facebook-square fa-2x"></i>&nbsp;</a>
+                </li>
+                <li>
+                    <a class="footer-style-twitter " href="https://twitter.com/twttdc" target="twitter"><i class="fa fa-twitter-square fa-2x"></i>&nbsp;</a>
+                </li>
+                <li>
+                    <a class="footer-style-instagram " href="https://www.instagram.com/tourismtn/?hl=en" target="instagram"><i class="fa fa-instagram fa-2x"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- End of footer-->
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script async src="https://platform.twitter.com/widgets.js "></script>
+
+    <!-- custom JavaScript-->
+    <script src="scripts/hotelCostInit.js"></script>
+
+</body>
+
+</html>

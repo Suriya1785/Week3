@@ -3,6 +3,7 @@
  *Date:08/07/2019
  */
 "Use Strict";
+//window onload function to set the references
 window.onload = function() {
     // Set reference for anchor button
     const largerLinkField = document.getElementById("largerlink");

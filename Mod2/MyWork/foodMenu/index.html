@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Font Awesome: https://fontawesome.com/icons?d=gallery&m=free -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- custom css-->
+    <link rel="stylesheet" href="css/sites.css" />
+
+    <title>Lunch Menu</title>
+</head>
+
+<body>
+    <!-- Start Body -->
+
+    <!-- Start Body -->
+
+    <!-- Navigation to applicable web pages -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
+        <a class="navbar-brand" href="index.html">KumbaKonam Special</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header of the page outlining the logo-->
+    <header>
+        <div class="jumbotron">
+            <div class="container text-right">
+                <h1 class="trend-title display-5 font-italic">Kumbakonam Food Menu</h1>
+                <h2 class="font-italic display-5 font-weight-light">You are no longer Stranger</h2>
+            </div>
+        </div>
+    </header>
+
+    <!-- Content - Vision of the website-->
+    <main>
+        <section class="container justify-content-center border">
+            <h3 class="font-italic">Roadside Food stalls - Info on items at our hotel</h3>
+            <form class="form-group" id="foodMenuForm" action="index.html" target="_self">
+                <div class="row col-md-8 mt-1 form-inline">
+                    <label class="d-none d-md-inline col-md-3" for="selectCategory">Food Category</label>
+                    <select id="selectCategory" class="d-none d-inline form-control col-md-5" name="selectCategory" autofocus>
+                        <option value =" ">Select Food Category Type</option>
+                    </select>
+                </div>
+                <!-- result output-->
+                <table id="menu" class="mt-3">
+
+                </table>
+                <p id="errorMsgId">
+
+                </p>
+
+            </form>
+        </section>
+    </main>
+    <hr />
+
+    <footer class="footer">
+        <!-- Start of footer -->
+        <div class="row justify-content-center">
+            <p class="display-5 font-weight-light">@HartCode Exercise</p>
+        </div>
+        <!-- End of footer-->
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js " integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN " crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js " integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q " crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js " integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl " crossorigin="anonymous"></script>
+    <script async src="https://platform.twitter.com/widgets.js"></script>
+
+    <!-- Scripts-->
+    <script src="scripts/foodMenuDynamic.js"></script>
+
+</body>
